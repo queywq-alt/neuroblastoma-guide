@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A parent-friendly guide to understanding neuroblastoma, how it develops, and how it can affect a child's body.">
+<title>Understanding Neuroblastoma | A guide for families</title>
+<style>
+:root{
+  --navy:#17324d; --blue:#2d6685; --teal:#4b9b99; --mint:#e8f3f0;
+  --cream:#fbf8f2; --ink:#263746; --muted:#61717d; --line:#dce5e7;
+  --white:#fff; --gold:#e9bd69; --softblue:#edf4f8;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+a{color:var(--blue)}
+header{background:linear-gradient(120deg,#17324d,#2e6d83);color:white;padding:18px max(6vw,22px)}
+.topbar{max-width:1120px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+.brand{font-weight:750;letter-spacing:.02em}
+nav{display:flex;gap:18px;flex-wrap:wrap}
+nav a{color:#eaf4f6;text-decoration:none;font-size:.92rem}
+nav a:hover{text-decoration:underline}
+.hero{background:linear-gradient(120deg,#e7f1f1 0%,#f7f4eb 100%);padding:72px max(6vw,22px) 62px}
+.hero-inner{max-width:1120px;margin:auto;display:grid;grid-template-columns:1.3fr .7fr;gap:48px;align-items:center}
+.eyebrow{text-transform:uppercase;letter-spacing:.13em;color:var(--teal);font-size:.78rem;font-weight:800}
+h1{font-size:clamp(2.5rem,5vw,4.5rem);line-height:1.06;color:var(--navy);margin:14px 0 20px;letter-spacing:-.04em}
+.hero p{font-size:1.15rem;max-width:680px;color:#425766}
+.hero-art{background:white;border:1px solid var(--line);border-radius:28px;padding:25px;box-shadow:0 16px 40px #17324d12}
+.cell{width:155px;height:155px;border-radius:50%;margin:8px auto 18px;background:radial-gradient(circle at 40% 35%,#f8dca4 0 10%,#e9bd69 11% 28%,#d18d6e 29% 48%,#b86d67 49% 100%);border:8px solid #f5e8d2;position:relative}
+.cell:after{content:"";position:absolute;width:48px;height:48px;border-radius:50%;background:#6f668e;left:51px;top:45px;box-shadow:inset -5px -5px 0 #514968}
+.cell-label{text-align:center;color:var(--muted);font-size:.9rem}
+main{max-width:1000px;margin:auto;padding:0 22px 70px}
+.mode-panel{margin:-24px auto 46px;position:relative;background:white;border:1px solid var(--line);border-radius:18px;padding:18px 22px;box-shadow:0 10px 28px #17324d10;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.mode-copy strong{display:block;color:var(--navy)}
+.mode-copy span{font-size:.9rem;color:var(--muted)}
+.toggle{display:flex;background:#edf2f3;border-radius:999px;padding:4px;gap:4px}
+.toggle button{border:0;background:transparent;padding:10px 16px;border-radius:999px;font-weight:700;color:#526674;cursor:pointer}
+.toggle button[aria-pressed="true"]{background:var(--navy);color:white;box-shadow:0 2px 8px #17324d25}
+section{padding:24px 0 30px;scroll-margin-top:20px}
+.section-kicker{color:var(--teal);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:.76rem}
+h2{font-size:clamp(1.8rem,3vw,2.5rem);line-height:1.2;color:var(--navy);margin:8px 0 14px;letter-spacing:-.025em}
+h3{color:var(--navy);margin:0 0 8px;font-size:1.15rem}
+.lead{font-size:1.1rem;color:#4a5e6c;max-width:800px}
+.panel{background:white;border:1px solid var(--line);border-radius:20px;padding:24px;margin:18px 0}
+.pathway{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;align-items:stretch;margin:25px 0}
+.step{background:var(--softblue);border:1px solid #d9e7ed;border-radius:14px;padding:15px 10px;text-align:center;position:relative}
+.step b{display:block;color:var(--navy);font-size:.93rem}
+.step small{display:block;color:var(--muted);font-size:.78rem;margin-top:5px}
+.step:not(:last-child):after{content:"→";position:absolute;right:-13px;top:40%;z-index:2;color:var(--teal);font-weight:900;font-size:1.2rem}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.info-card{background:white;border:1px solid var(--line);border-radius:18px;padding:21px}
+.info-card.normal{border-top:5px solid var(--teal)}
+.info-card.cancer{border-top:5px solid #c47b65}
+.pill{display:inline-block;background:var(--mint);color:#286967;border-radius:999px;padding:4px 10px;font-size:.78rem;font-weight:750;margin-bottom:10px}
+.warning{background:#fff7e8;border-left:4px solid var(--gold);padding:16px 18px;border-radius:8px;margin:18px 0}
+.flow{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:9px;margin:22px 0}
+.flow span{background:#edf4f8;border:1px solid #d8e5eb;border-radius:12px;padding:12px 14px;text-align:center;font-weight:700;color:var(--navy)}
+.flow i{font-style:normal;color:var(--teal);font-weight:900}
+.symptoms{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.symptom{background:white;border:1px solid var(--line);border-radius:16px;padding:18px}
+.symptom .symbol{font-size:1.7rem}
+details{background:white;border:1px solid var(--line);border-radius:14px;padding:15px 18px;margin:10px 0}
+summary{font-weight:750;color:var(--navy);cursor:pointer}
+footer{background:var(--navy);color:#eaf1f4;padding:32px max(6vw,22px)}
+footer .inner{max-width:1000px;margin:auto}
+footer p{max-width:800px;color:#d4e1e7;font-size:.9rem}
+.science{display:none}
+body.scientific .science{display:block}
+body.scientific .simple{display:none}
+.note{font-size:.88rem;color:var(--muted)}
+@media(max-width:760px){
+ .hero-inner{grid-template-columns:1fr;gap:25px}.hero{padding-top:48px}
+ .hero-art{max-width:320px}
+ .pathway{grid-template-columns:1fr;gap:8px}
+ .step:not(:last-child):after{content:"↓";right:50%;top:auto;bottom:-17px}
+ .two-col,.symptoms{grid-template-columns:1fr}
+ nav{gap:10px}
+}
+</style>
+</head>
+<body>
+<header>
+ <div class="topbar">
+  <div class="brand">UNDERSTANDING NEUROBLASTOMA</div>
+  <nav aria-label="Main navigation">
+   <a href="#about">Overview</a><a href="#development">Development</a><a href="#changes">What changes</a><a href="#body">Effects on the body</a><a href="#glossary">Glossary</a>
+  </nav>
+ </div>
+</header>
+<div class="hero">
+ <div class="hero-inner">
+  <div>
+   <div class="eyebrow">A guide for families</div>
+   <h1>Understanding neuroblastoma</h1>
+   <p>Neuroblastoma is a childhood cancer that begins in developing cells of the sympathetic nervous system. This guide explains how those cells normally develop, what can go wrong, and how the disease can affect a child's body.</p>
+  </div>
+  <div class="hero-art" aria-label="Illustration of a cell">
+   <div class="cell"></div>
+   <div class="cell-label">Cells are the building blocks of the body</div>
+  </div>
+ </div>
+</div>
+<main>
+ <div class="mode-panel">
+  <div class="mode-copy"><strong>Choose how much detail you'd like</strong><span>The simple explanation is designed for families. Switch on scientific detail to explore the biology further.</span></div>
+  <div class="toggle" role="group" aria-label="Explanation level">
+   <button id="simpleBtn" aria-pressed="true" type="button">Simple explanation</button>
+   <button id="scienceBtn" aria-pressed="false" type="button">Scientific detail</button>
+  </div>
+ </div>
+
+ <section id="about">
+  <div class="section-kicker">01 · The basics</div>
+  <h2>What is neuroblastoma?</h2>
+  <p class="lead simple">Our bodies are made of tiny building blocks called cells. Neuroblastoma happens when some early, developing cells in the nervous system do not mature as they should and begin growing out of control.</p>
+  <p class="lead science">Neuroblastoma is a tumour arising from immature cells of the sympathoadrenal lineage, which normally contributes to sympathetic neurons and adrenal medulla chromaffin cells. It is biologically diverse, and the molecular features vary between tumours.</p>
+  <div class="panel">
+   <h3>Where does it begin?</h3>
+   <p class="simple">It usually starts in the developing sympathetic nervous system. This system helps control automatic body functions, such as heart rate and digestion. Many neuroblastomas begin in the adrenal glands, which sit above the kidneys, or along nerve tissue near the spine.</p>
+   <p class="science">The sympathetic nervous system is part of the autonomic nervous system. Neuroblastoma most commonly arises in the adrenal medulla or sympathetic ganglia along the paraspinal region.</p>
+  </div>
+ </section>
+
+ <section id="development">
+  <div class="section-kicker">02 · Normal development</div>
+  <h2>How do these cells normally develop?</h2>
+  <p class="simple">Before birth, a group of early cells called neural crest cells can develop into several different cell types. Some become part of the sympathetic nervous system.</p>
+  <p class="science">Neural crest cells give rise to sympathoadrenal progenitors. These progenitors can differentiate along sympathetic neuronal or chromaffin cell lineages.</p>
+  <div class="pathway" aria-label="Normal cell development pathway">
+   <div class="step"><b>Neural crest cell</b><small>Early developing cell</small></div>
+   <div class="step"><b>Sympathoadrenal progenitor</b><small>Can follow more than one path</small></div>
+   <div class="step"><b>Two possible paths</b><small>Different specialised cells</small></div>
+   <div class="step"><b>Sympathetic neuron</b><small>Or chromaffin cell</small></div>
+   <div class="step"><b>Mature cell</b><small>Performs a specialised role</small></div>
+  </div>
+  <div class="two-col">
+   <div class="info-card normal">
+    <span class="pill">Normal pathway A</span><h3>Sympathetic neuron</h3>
+    <p class="simple">Develops into a nerve cell that helps send messages around the body.</p>
+    <p class="science">Differentiates into a sympathetic neuron that participates in autonomic signalling.</p>
+   </div>
+   <div class="info-card normal">
+    <span class="pill">Normal pathway B</span><h3>Chromaffin cell</h3>
+    <p class="simple">Develops into a cell in the adrenal medulla, the inner part of the adrenal gland.</p>
+    <p class="science">Differentiates into a chromaffin cell of the adrenal medulla, which releases catecholamines such as adrenaline and noradrenaline.</p>
+   </div>
+  </div>
+  <div class="panel">
+   <h3>What helps guide development?</h3>
+   <p class="simple">Cells use instructions and signals to know when to grow, when to survive, and when to mature into their proper role.</p>
+   <p class="science">Several genes and signalling pathways help regulate sympathetic-lineage development. PHOX2B supports autonomic and sympathetic neuronal identity. MYCN helps support growth in early developing cells and is normally reduced as cells mature. ALK signalling contributes to normal cell survival and development.</p>
+   <ul>
+    <li><strong>PHOX2B:</strong> helps guide cells towards the correct nerve-cell identity.</li>
+    <li><strong>MYCN:</strong> supports growth in early cells; its activity normally decreases as cells mature.</li>
+    <li><strong>ALK:</strong> helps send signals involved in cell survival and development.</li>
+   </ul>
+  </div>
+ </section>
+
+ <section id="changes">
+  <div class="section-kicker">03 · What changes</div>
+  <h2>What goes wrong in neuroblastoma?</h2>
+  <p class="simple">Sometimes the normal instructions that guide a developing cell become disrupted. A cell may stay immature instead of finishing its development. It may also keep receiving signals that help it survive and divide.</p>
+  <p class="science">Neuroblastoma is associated with disrupted differentiation and abnormal control of cell survival and proliferation. Some tumours contain specific molecular alterations, including MYCN amplification or activating ALK mutations. These alterations are not present in every case.</p>
+  <div class="two-col">
+   <div class="info-card normal">
+    <span class="pill">Typical development</span><h3>A cell matures</h3>
+    <p class="simple">The cell develops into a specialised cell, and its growth becomes controlled.</p>
+    <p class="science">Differentiation proceeds and proliferative activity generally decreases as cells mature.</p>
+   </div>
+   <div class="info-card cancer">
+    <span class="pill" style="background:#f8ece7;color:#985b4a">Neuroblastoma</span><h3>A cell remains immature</h3>
+    <p class="simple">Some cells do not mature properly and continue to survive and multiply.</p>
+    <p class="science">Differentiation may be impaired, while pro-growth and pro-survival signals support continued proliferation and accumulation of abnormal cells.</p>
+   </div>
+  </div>
+  <div class="panel">
+   <h3>Examples of genetic changes</h3>
+   <ul>
+    <li><strong>MYCN amplification:</strong> extra copies of the MYCN gene can drive excessive growth and cell division.</li>
+    <li><strong>Activating ALK mutations:</strong> certain changes can keep ALK growth and survival signalling switched on.</li>
+   </ul>
+   <p class="science">These are examples of alterations associated with some neuroblastomas, not a checklist that applies to every child. PHOX2B has an important role in normal developmental identity; it should not be assumed to be altered in every tumour.</p>
+   <div class="warning"><strong>Important:</strong> Neuroblastoma is not exactly the same in every child. Different tumours can have different genetic features and behave differently.</div>
+  </div>
+ </section>
+
+ <section id="tumour">
+  <div class="section-kicker">04 · From cells to a tumour</div>
+  <h2>How can this lead to a tumour?</h2>
+  <p class="simple">When abnormal cells keep surviving and dividing, they can build up in one place and form a mass called a tumour.</p>
+  <p class="science">A combination of impaired differentiation, increased proliferation and enhanced survival can allow immature tumour cells to accumulate and form a neuroblastoma mass.</p>
+  <div class="flow" aria-label="How a tumour can form">
+   <span>Immature cell</span><i>→</i><span>Does not mature normally</span><i>→</i><span>Survives and divides</span><i>→</i><span style="background:#f8ece7;border-color:#e8cfc4">Cells accumulate</span><i>→</i><span style="background:#f8ece7;border-color:#e8cfc4">Tumour</span>
+  </div>
+ </section>
+
+ <section id="body">
+  <div class="section-kicker">05 · Effects on the body</div>
+  <h2>How can neuroblastoma affect a child?</h2>
+  <p class="simple">The effects depend on where the tumour is, how large it becomes, and whether it has spread to other parts of the body.</p>
+  <p class="science">Clinical effects reflect the primary tumour's location and local mass effect, as well as metastatic involvement. Bone marrow involvement can disrupt normal blood-cell production.</p>
+  <div class="symptoms">
+   <div class="symptom"><div class="symbol">◉</div><h3>Growth in one area</h3><p class="simple">A tumour can press on nearby organs or tissues. In the abdomen, this may cause swelling, discomfort or pain.</p><p class="science">Local mass effect may cause abdominal distension, pain or symptoms related to compression of nearby structures.</p></div>
+   <div class="symptom"><div class="symbol">⌁</div><h3>Spread to the bones</h3><p class="simple">If cancer cells spread to bones, they can cause bone pain and damage.</p><p class="science">Osseous metastases may cause bone pain and skeletal complications.</p></div>
+   <div class="symptom"><div class="symbol">＋</div><h3>Spread to bone marrow</h3><p class="simple">Bone marrow makes blood cells. If cancer cells affect it, the body may make fewer healthy blood cells, which can contribute to tiredness and other problems.</p><p class="science">Bone marrow infiltration can impair haematopoiesis, potentially reducing red blood cells, white blood cells and platelets.</p></div>
+  </div>
+  <p class="note">Children can have different symptoms. These examples explain possible effects and are not a way to diagnose neuroblastoma.</p>
+ </section>
+
+ <section id="glossary">
+  <div class="section-kicker">06 · Helpful words</div>
+  <h2>Quick glossary</h2>
+  <details><summary>Cell differentiation</summary><p>The process by which an early cell develops into a more specialised cell with a particular job.</p></details>
+  <details><summary>Proliferation</summary><p>An increase in cell number through cell division.</p></details>
+  <details><summary>Neural crest cells</summary><p>Early embryonic cells that can develop into several different cell types, including cells in parts of the nervous system.</p></details>
+  <details><summary>Sympathetic nervous system</summary><p>A part of the autonomic nervous system that helps the body respond to changes, including by influencing heart rate and other automatic functions.</p></details>
+  <details><summary>Gene amplification</summary><p>An increase in the number of copies of a particular gene. Extra copies can sometimes increase the gene's activity.</p></details>
+  <details><summary>Mutation</summary><p>A change in the DNA sequence of a gene.</p></details>
+ </section>
+
+ <section>
+  <div class="section-kicker">07 · Remember</div>
+  <h2>The key message</h2>
+  <div class="panel">
+   <p class="simple">Neuroblastoma begins in early developing cells that do not mature normally. These cells can continue to survive and multiply, forming a tumour that may affect nearby tissues or spread to other parts of the body.</p>
+   <p class="science">Neuroblastoma is a biologically diverse childhood cancer arising from the sympathoadrenal lineage. Disrupted differentiation and altered survival and proliferation pathways contribute to tumour development, while clinical effects depend on tumour location and disease spread.</p>
+  </div>
+ </section>
+</main>
+<footer>
+ <div class="inner">
+  <strong>Understanding Neuroblastoma</strong>
+  <p>Educational resource for families. This website is intended to explain biology in accessible language. It does not provide individual medical advice or replace discussion with a child's healthcare team.</p>
+  <p class="note" style="color:#d4e1e7">The diagrams and page design in this draft are original, created for this educational project. Scientific references and any additional image credits should be added to the final assignment submission.</p>
+ </div>
+</footer>
+<script>
+const simpleBtn=document.getElementById('simpleBtn');
+const scienceBtn=document.getElementById('scienceBtn');
+function setMode(scientific){
+ document.body.classList.toggle('scientific',scientific);
+ simpleBtn.setAttribute('aria-pressed',String(!scientific));
+ scienceBtn.setAttribute('aria-pressed',String(scientific));
+}
+simpleBtn.addEventListener('click',()=>setMode(false));
+scienceBtn.addEventListener('click',()=>setMode(true));
+</script>
+</body>
+</html>
